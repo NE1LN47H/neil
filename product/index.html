@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 15 Pro</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            border-bottom: 1px solid #ccc;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            text-align: center;
+            padding: 20px 80px;
+        }
+
+        .container {
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 40px -10px,
+                        rgba(0, 0, 0, 0.3) 0px 10px 20px -10px;
+        }
+
+        .product-heading {
+            font-size: 24px;
+        }
+
+        .product-image {
+            display: block;
+            margin: 10px auto;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .price {
+            font-size: 18px;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        .buy {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buy:hover {
+            background-color: gray;
+            color: black;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                font-size: 14px;
+            }
+
+            .main {
+                padding: 15px;
+            }
+
+            .container {
+                width: 90%;
+                text-align: center;
+            }
+
+            .product-heading {
+                font-size: 20px;
+            }
+
+            .price {
+                font-size: 16px;
+            }
+
+            .buy {
+                width: 100%;
+            }
+        }
+
+        @media (orientation: landscape) {
+            .container {
+                background-color: lightblue;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Specifications</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main">
+        <h1>iPhone 15 Pro</h1>
+
+        <p>
+            The iPhone 15 Pro is Apple's latest premium smartphone with an
+            advanced camera system, powerful A17 Pro chip, and stunning OLED
+            display. It delivers excellent performance and an exceptional
+            user experience.
+        </p>
+    </div>
+
+    <div class="container">
+
+        <h2 class="product-heading">iPhone 15 Pro</h2>
+
+        <img class="product-image"
+            src="https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone_15_pro.png"
+            alt="iPhone 15 Pro">
+
+        <p class="price">
+            Price: <span>₹85,000</span>
+        </p>
+
+        <button class="buy">Buy Now</button>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 iPhone 15 Pro. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
