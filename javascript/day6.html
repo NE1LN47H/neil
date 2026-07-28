@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const productNames = ["Apple","Orange","Mango"];
+        const productPrice = [50,60,70];
+
+        const newArray = [];
+
+        for (let i = 0; i < productNames.length; i++) {
+            newArray.push(`Product: ${productNames[i]} - Price: ${productPrice[i]}`);
+        }
+        console.log(newArray);
+
+        const latest = newArray.forEach((value) => console.log(value));
+
+        productPrice.filter((price) =>  console.log(productPrice.price > 50));
+
+    </script>
+</body>
+</html>

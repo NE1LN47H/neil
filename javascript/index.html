@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javscript</title>
+    <style>
+        #btn {
+            background-color: rgb(0, 132, 255);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        #show {
+            /* background-color: rgb(0, 132, 255); */
+            color: rgb(0, 0, 0);
+            /* padding: 20px; */
+            text-align: center;
+            margin: auto;
+            display: flex;
+            align-items: center;  
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn" onclick="displayFunction()">Click me</button>
+    <p id="show"></p>
+<script>
+    function displayFunction() {
+        document.getElementById("show").innerText = "hello"
+    }
+</script>
+</body>
+</html>
