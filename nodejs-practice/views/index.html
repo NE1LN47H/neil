@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neilnath</title>
+</head>
+<body>
+    <h1>Server is running</h1>
+    <p>Welcome to my Node.js application!</p>
+    <p>users data: </p>
+</body>
+<script>
+    fetch('/users')
+        .then(response => response.json())
+        .then(data => {
+            const usersData = document.createElement('pre');
+            usersData.textContent = JSON.stringify(data, null, 2);
+            document.body.appendChild(usersData);
+        })
+        .catch(error => console.error('Error fetching users data:', error));
+</script>
+</html>
