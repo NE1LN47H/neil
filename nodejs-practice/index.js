@@ -1,27 +1,23 @@
 const http = require('http');
+const fs = require('fs');
+const path = require('path');
+
+
+const homePage = fs.readFileSync('./views/index.html');
+const contactPage = fs.readFileSync('./views/contact.html');
 
 const server = http.createServer(function(req, res) {
-    if(req.url === '/' && req.method === 'GET') {
-        res.statusCode = 200;
-        res.end("Welcome to User Server");
-    } else if (req.url === '/users' && req.method === 'GET') {
-        res.statusCode = 200;
-        res.end("Users Page");
-    } else if (req.url === '/profile' && req.method === 'GET') {
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/html');
-        res.end("<h1>Profile Page</h1>\n<p>Welcome to the profile page!</p>");
-    } else if (req.url === '/' && req.method === 'POST') {
-        res.statusCode = 405;
-        res.end("Method Not Allowed");
-    } else {
-        res.statusCode = 404;
-        res.end("Page Not Found");
+    if(req.url === '/') {
+        res.writeHead(200, {'Content-Type': 'text/html'})
+        res.end(homePage);
+    } else if(req.url === '/contact') {
+        res.writeHead(200, {'Content-Type': 'text/html'})
+        res.end(contactPage);
     }
 });
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 server.listen(port, function() {
-    console.log(`Server is running on port http://localhost:${port}`);
-});
+    console.log(`server running on: http://localhost:${port}`);
+})
